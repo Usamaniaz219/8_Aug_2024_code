@@ -88,9 +88,7 @@ for i,cnt1 in enumerate(retained_contours):
     cv2.fillPoly(blank_mask_image, [cnt11], (255))
     # cv2.dilate(blank_mask_image,kernel,iterations=1)
     cv2.fillPoly(mask_image, [cnt11], (255))
-    # merged_ca_dublin_result = cv2.bitwise_or(blank_mask_image,mask_image)
-    # cv2.drawContours(blank_mask_image,[cnt1],-1,(255,255,255),4)
-    # cv2.imwrite(f"/home/usama/Aug_1_2024_code/retained_contours/retained_contours{i}.jpg",blank_mask_image)
+    
 kernel = np.ones((3, 3), np.uint8)
 
 cv2.imwrite("text_area_masks_ca_colma_1.jpg",blank_mask_image)
